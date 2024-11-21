@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Sistema IoT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Control IoT</h1>
+        </header>
+
+            <section class="card">
+                <h2>Estado del sistema de seguridad</h2>
+               <label>Estado: <span id="state-rfid"></span> </label>
+            </section>
+
+
+            <section class="card">
+                <h2>Control de Cámaras</h2>
+                <label class="switch">
+                    <input type="checkbox" id="cam1">
+                    <span class="slider"></span>
+                </label>
+                <label for="cam1">Cámara 1</label>
+                <br></br>
+                <label class="switch">
+                    <input type="checkbox" id="cam2">
+                    <span class="slider"></span>
+                </label>
+                <label for="cam2">Cámara 2</label>
+                <br></br>
+                <label class="switch">
+                    <input type="checkbox" id="cam3">
+                    <span class="slider"></span>
+                </label>
+                <label for="cam3">Cámara 3</label>
+            </section>
+
+            <section class="card">
+                <h2>Control de Leds</h2>
+                <br>
+                <button id="sensor1" class="sensor-button">Encender Luz</button>
+                </br><br>
+                <button id="sensor2" class="sensor-button">Apagar Luz</button>
+                </br>
+            </section>
+
+
+            <section class="card status">
+                <h2>Estado de los Dispositivos</h2>
+                <div id="status-cam">Cámaras: Inactivas</div>
+                <div id="status-sensor">Sensores de Movimiento: <span id="state-sensor"></span></div>
+                <div id="status-buzzer">Alarma: Inactiva</div>
+                <div id="status-door">Puerta: Cerrada</div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
